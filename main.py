@@ -7,7 +7,7 @@ from datetime import date
 
 print(Fore.BLUE)
 
-options = input (" 1. Input identifier\n 2. Counting to 1000\n 3.Calender\n 4. Covid 19 Info \n")
+options = input (" 1. Input identifier\n 2. Counting to 1000\n 3.Calculator\n 4. Covid 19 Info \n")
 
 print(Fore.BLUE)
 
@@ -66,5 +66,55 @@ if options == '1':
 elif options == '2':
   for x in range(1001):
     print(x)
-else:
-  print("The counting is finished!")
+  else:
+    print("The counting is finished!")
+
+elif options == '3':
+  def add(x, y):
+    return x + y
+
+  def subtract(x, y):
+    return x - y
+
+
+  def multiply(x, y):
+    return x * y
+
+
+  def divide(x, y):
+    return x / y
+
+
+  print("Select operation.")
+  print("+")
+  print("-")
+  print("*")
+  print("/")
+
+  while True:
+    choice = input("Enter Operation(+/-/*//): ")
+
+
+    if choice in ('+', '-', '*', '/'):
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+        if choice == '+':
+            print(num1, "+", num2, "=", add(num1, num2))
+
+        elif choice == '-':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+
+        elif choice == '*':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+
+        elif choice == '/':
+            print(num1, "/", num2, "=", divide(num1, num2))
+        
+        next_calculation = input("Next? (yes/no): ")
+        if next_calculation == "no":
+          break
+    
+    else:
+        print("Invalid Input")
+
