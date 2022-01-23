@@ -8,6 +8,7 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.8"
 colorama = "^0.4.4"
 termcolor = "^1.1.0"
+Flask = "^2.0.2"
 
 [tool.poetry.dev-dependencies]
 
