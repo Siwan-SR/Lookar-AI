@@ -7,7 +7,7 @@ from datetime import date
 
 print(Fore.BLUE)
 
-options = input (" 1. Input identifier\n 2. Counting to 1000\n 3.Calculator\n 4. Covid 19 Info \n")
+options = input (" 1. Input identifier\n 2. Counting to 1000\n 3.Calculator\n 4. Translator \n")
 
 print(Fore.BLUE)
 
