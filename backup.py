@@ -1,14 +1,4 @@
-import sys
-import turtle
-from tkinter import *
-from termcolor import colored
-from colorama import Fore, Back, Style
-from time import sleep
-from datetime import date
-
-print(Fore.BLUE)
-
-options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Browsing \n")
+options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Translator \n")
 
 print(Fore.BLUE)
 
@@ -118,3 +108,7 @@ elif options == '3':
     
     else:
         print("Invalid Input")
+
+else:
+  print("Invalid Input")
+  sys.exit()
