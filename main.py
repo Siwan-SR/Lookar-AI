@@ -9,7 +9,7 @@ from datetime import date
 
 print(Fore.BLUE)
 
-options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square \n")
+options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square\n 5. Square Root\n")
 
 print(Fore.BLUE)
 
@@ -122,15 +122,20 @@ elif options == '3':
 
 
 elif options == '4':
-  try:
-    sq = int(input ("Enter number:\n"))
-    print("\n")
-    print("\n")
-  except ValueError:
-      print("Please enter a number.")
-      sys.exit()
-root = math.sqrt(sq)
-if int(root + 0.5) ** 2 == sq:
-    print(sq, 'is a perfect square')
-else:
-    print(sq, 'is not a perfect square')
+    try:
+      sq = int(input ("Enter number:\n"))
+      print("\n")
+      print("\n")
+    except ValueError:
+        print("Please enter a number.")
+        sys.exit()
+    root = math.sqrt(sq)
+    if int(root + 0.5) ** 2 == sq:
+      print(sq, 'is a perfect square')
+    else:
+      print(sq, 'is not a perfect square')  
+
+elif options == '5':
+  num = float(input("Enter the number: ")) 
+  SquareRoot = math.pow(num, 0.5) 
+  print("The Square Root is {0} = {1}" .format(num, SquareRoot))
