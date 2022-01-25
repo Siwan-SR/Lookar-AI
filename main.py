@@ -1,5 +1,6 @@
 import sys
 import turtle
+import math
 from tkinter import *
 from termcolor import colored
 from colorama import Fore, Back, Style
@@ -8,7 +9,7 @@ from datetime import date
 
 print(Fore.BLUE)
 
-options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Browsing \n")
+options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square \n")
 
 print(Fore.BLUE)
 
@@ -118,3 +119,18 @@ elif options == '3':
     
     else:
         print("Invalid Input")
+
+
+elif options == '4':
+  try:
+    sq = int(input ("Enter number:\n"))
+    print("\n")
+    print("\n")
+  except ValueError:
+      print("Please enter a number.")
+      sys.exit()
+root = math.sqrt(sq)
+if int(root + 0.5) ** 2 == sq:
+    print(sq, 'is a perfect square')
+else:
+    print(sq, 'is not a perfect square')
