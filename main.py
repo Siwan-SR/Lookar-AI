@@ -136,6 +136,12 @@ elif options == '4':
       print(sq, 'is not a perfect square')  
 
 elif options == '5':
-  num = float(input("Enter the number: ")) 
-  SquareRoot = math.pow(num, 0.5) 
-  print("The Square Root is {0} = {1}" .format(num, SquareRoot))
+      try:
+        sqr = int(input ("Enter number:\n"))
+        print("\n")
+        print("\n")
+      except ValueError:
+          print("Please enter a number.")
+          sys.exit()
+      SquareRoot = math.pow(sqr, 0.5) 
+      print("The Square Root is {0} = {1}" .format(sqr, SquareRoot))
