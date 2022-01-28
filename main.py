@@ -9,7 +9,7 @@ from datetime import date
 
 print(Fore.BLUE)
 
-options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square\n 5. Square Root\n")
+options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square\n 5. Square Root\n 6. BMI Calculator\n")
 
 print(Fore.BLUE)
 
@@ -145,3 +145,37 @@ elif options == '5':
           sys.exit()
       SquareRoot = math.pow(sqr, 0.5) 
       print("The Square Root is {0} = {1}" .format(sqr, SquareRoot))
+
+elif options == '6':
+  def add(x, y):
+    return x + y
+
+  def multiply(x, y):
+      return x * y
+
+  def divide(x, y):
+      return x / y
+
+  try:
+      height = float(input ("Enter your height in meters:\n"))
+  except ValueError:
+        print("Please enter a number.")
+        sys.exit()
+
+  try:
+      weight = float(input ("Enter your weight in kilograms:\n"))
+  except ValueError:
+        print("Please enter a number.")
+        sys.exit()
+
+  bmiheight = height * height
+
+  print(height, "*", height, "=", multiply(height, height))
+  sleep(0.5)
+  print(weight, "/", bmiheight, "=", divide(weight, bmiheight))
+  print("\n")
+  print("\n")
+  print("BMI stands for Body Mass Index. If your BMI is less than 18.5, it falls within the underweight range. If your BMI is 18.5 to 24.9, it falls within the normal or Healthy Weight range. If your BMI is 25.0 to 29.9, it falls within the overweight range.")
+else:
+  print("Invalid Input")
+  sys.exit()
