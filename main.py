@@ -8,7 +8,7 @@ from datetime import date
 
 print(Fore.BLUE)
 
-options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square\n 5. Square Root\n 6. BMI Calculator\n 7. Guessing Game\n")
+options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square\n 5. Square Root\n 6. BMI Calculator\n 7. Games\n")
 
 print(Fore.BLUE)
 
@@ -175,37 +175,45 @@ elif options == '6':
   print("BMI stands for Body Mass Index. If your BMI is less than 18.5, it falls within the underweight range. If your BMI is 18.5 to 24.9, it falls within the normal or Healthy Weight range. If your BMI is 25.0 to 29.9, it falls within the overweight range.")
 
 elif options == '7':
-    class NumberGuessingGame:
+  game_options = input ("1. Number guessing\n")
 
-      def __init__(self):
+  if game_options == '1':
 
-          self.LOWER = 1
-          self.HIGHER = 100
+      class NumberGuessingGame:
 
-      def get_random_number(self):
-          return random.randint(self.LOWER, self.HIGHER)
+        def __init__(self):
 
-      def start(self):
-          random_number = self.get_random_number()
+            self.LOWER = 1
+            self.HIGHER = 100
 
-          print(
-              f"Guess the number from {self.LOWER} to {self.HIGHER}")
+        def get_random_number(self):
+            return random.randint(self.LOWER, self.HIGHER)
 
-          chances = 0
-          while True:
-              user_number = int(input("Enter your guessed number: "))
-              if user_number == random_number:
-                  print(
-                      f"-> Hurray! You got it in {chances + 1} step{'s' if chances > 1 else ''}!")
-                  break
-              elif user_number < random_number:
-                  print("-> Your number is less than the random number")
-              else:
-                  print("-> Your number is greater than the random number")
-              chances += 1
+        def start(self):
+            random_number = self.get_random_number()
 
-    numberGuessingGame = NumberGuessingGame()
-    numberGuessingGame.start()
+            print(
+                f"Guess the number from {self.LOWER} to {self.HIGHER}")
+
+            chances = 0
+            while True:
+                user_number = int(input("Enter your guessed number: "))
+                if user_number == random_number:
+                    print(
+                        f"-> Hurray! You got it in {chances + 1} step{'s' if chances > 1 else ''}!")
+                    break
+                elif user_number < random_number:
+                    print("-> Your number is less than the random number")
+                else:
+                    print("-> Your number is greater than the random number")
+                chances += 1
+
+      numberGuessingGame = NumberGuessingGame()
+      numberGuessingGame.start()  
+
+  else:
+    print("That is not an option!")
+    sys.exit()
 
 else:
   print("Invalid Input")
