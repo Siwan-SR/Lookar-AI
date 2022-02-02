@@ -6,12 +6,10 @@ Note: The bot doesn't save any input to a database.
 
 No one, not even Lookar can see your input.
 
-Future plans: Make the bot save permanent input if users want it to make it permanent. Add more questions as data. 
-
 Owner: @Siwan-SR
 Github: @Siwan-SR
 Replit: @Siwan-SR
 
 Copyrights @Siwan-SR 2022 January
 
-To fork: Forking this project is absolutely fine. Please give @Siwan-SR credits if you copy the entire project. Otherwise, copying some blocks of code is completely fine.
+To fork: Forking this project is not allowed. Althought copying some blocks of code is completely fine.

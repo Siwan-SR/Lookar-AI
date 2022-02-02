@@ -1,7 +1,6 @@
 import sys
 import math
 import random
-from replit import db
 from colorama import Fore, Back, Style
 from time import sleep
 from datetime import date
@@ -216,7 +215,7 @@ elif options == '7':
     sys.exit()
 
 elif options == '8':
-  pi_options = input (" 1. Diameter to Circumference\n 2. Circumference to Diameter\n 3. Diameter to Radius\n 4. Radius to Diameter\n 5. Radius to Area\n 6. Area to Radius\n\n")
+  pi_options = input (" 1. Diameter to Circumference\n 2. Circumference to Diameter\n 3. Diameter to Radius\n 4. Radius to Diameter\n 5. Radius to Area\n\n")
 
   if pi_options == '1':
 
@@ -270,7 +269,7 @@ elif options == '8':
       sys.exit()
 
     pi = 3.14
-    pi_ans1 = c / pi
+    pi_ans2 = c / pi
     print("Diameter: ",divide(c, pi))
 
   elif pi_options == '3':
@@ -297,9 +296,63 @@ elif options == '8':
       sys.exit()
 
     unit = 2
-    pi_ans1 = d / unit
+    pi_ans3 = d / unit
     print("Diameter: ",divide(d, unit))
+  
+  elif pi_options == '4':
+    def add(x, y):
+      return x + y
+
+    def subtract(x, y):
+      return x - y
+
+
+    def multiply(x, y):
+      return x * y
+
+
+    def divide(x, y):
+      return x / y
+
+    try:
+      r = float(input ("Enter radius: "))
+
+    except ValueError:
+      print("Only numbers are allowed!")
+      sys.exit()
+
+    unit = 2
+    pi_ans4 = r * unit
+    print("Radius: ",multiply(r, unit))
+
+  elif pi_options == '5':
+
+    def add(x, y):
+      return x + y
+
+    def subtract(x, y):
+      return x - y
+
+
+    def multiply(x, y):
+      return x * y
+
+
+    def divide(x, y):
+      return x / y
+
+    try:
+      r = float(input ("Enter radius: "))
+
+    except ValueError:
+      print("Only numbers are allowed!")
+      sys.exit()
+
+    unit = 2
+    pi = 3.14
+    pi_ans5 = r * r
+    print("Radius: ",multiply(pi_ans5, pi))
 
 else:
-  print("Invalid Input")
+  print("That is not an option!")
   sys.exit()
