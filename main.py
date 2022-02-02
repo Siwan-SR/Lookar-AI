@@ -8,7 +8,7 @@ from datetime import date
 
 print(Fore.BLUE)
 
-options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square\n 5. Square Root\n 6. BMI Calculator\n 7. Games\n\n")
+options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square\n 5. Square Root\n 6. BMI Calculator\n 7. Games\n 8. PI Converter\n\n")
 
 print(Fore.BLUE)
 
@@ -214,6 +214,91 @@ elif options == '7':
   else:
     print("That is not an option!")
     sys.exit()
+
+elif options == '8':
+  pi_options = input (" 1. Diameter to Circumference\n 2. Circumference to Diameter\n 3. Diameter to Radius\n 4. Radius to Diameter\n 5. Radius to Area\n 6. Area to Radius\n\n")
+
+  if pi_options == '1':
+
+    def add(x, y):
+      return x + y
+
+    def subtract(x, y):
+      return x - y
+
+
+    def multiply(x, y):
+      return x * y
+
+
+    def divide(x, y):
+      return x / y
+
+    try:
+      d = float(input ("Enter diameter: "))
+
+    except ValueError:
+      print("Only numbers are allowed!")
+      sys.exit()
+    
+    pi = 3.14
+    pi_ans1 = d * pi
+
+    print("Circumference: ",multiply(d, pi))
+
+  elif pi_options == '2':
+    
+    def add(x, y):
+      return x + y
+
+    def subtract(x, y):
+      return x - y
+
+
+    def multiply(x, y):
+      return x * y
+
+
+    def divide(x, y):
+      return x / y
+
+    try:
+      c = float(input ("Enter circumference: "))
+
+    except ValueError:
+      print("Only numbers are allowed!")
+      sys.exit()
+
+    pi = 3.14
+    pi_ans1 = c / pi
+    print("Diameter: ",divide(c, pi))
+
+  elif pi_options == '3':
+    
+    def add(x, y):
+      return x + y
+
+    def subtract(x, y):
+      return x - y
+
+
+    def multiply(x, y):
+      return x * y
+
+
+    def divide(x, y):
+      return x / y
+
+    try:
+      d = float(input ("Enter diameter: "))
+
+    except ValueError:
+      print("Only numbers are allowed!")
+      sys.exit()
+
+    unit = 2
+    pi_ans1 = d / unit
+    print("Diameter: ",divide(d, unit))
 
 else:
   print("Invalid Input")
