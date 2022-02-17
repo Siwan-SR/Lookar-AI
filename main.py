@@ -1,13 +1,16 @@
 import sys
 import math
 import random
+import pyqrcode
+import png
+from pyqrcode import QRCode
 from colorama import Fore, Back, Style
 from time import sleep
 from datetime import date
 
 print(Fore.BLUE)
 
-options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square\n 5. Square Root\n 6. BMI Calculator\n 7. Games\n 8. PI Converter\n\n")
+options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square\n 5. Square Root\n 6. BMI Calculator\n 7. Games\n 8. PI Converter\n 9. QR Code Creator\n\nEnter option number: ")
 
 print(Fore.BLUE)
 
@@ -140,7 +143,7 @@ elif options == '5':
           print("Please enter a number.")
           sys.exit()
       SquareRoot = math.pow(sqr, 0.5) 
-      print("The Square Root is {0} = {1}" .format(sqr, SquareRoot))
+      print("The Square Root of {0} = {1}" .format(sqr, SquareRoot))
 
 elif options == '6':
   def add(x, y):
@@ -352,6 +355,16 @@ elif options == '8':
     pi = 3.14
     pi_ans5 = r * r
     print("Radius: ",multiply(pi_ans5, pi))
+
+elif options == '9':
+
+  s = input("Enter URL: ")
+    
+  url = pyqrcode.create(s)
+    
+  url.svg("myqr.svg", scale = 8)
+  
+  url.png('myqr.png', scale = 6)
 
 else:
   print("That is not an option!")
