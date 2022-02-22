@@ -10,7 +10,7 @@ from datetime import date
 
 print(Fore.BLUE)
 
-options = input (" 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square\n 5. Square Root\n 6. BMI Calculator\n 7. Games\n 8. PI Converter\n 9. QR Code Creator\n\nEnter option number: ")
+options = input ("Options: \n\n 1. Input identifier\n 2. Counting to 1000\n 3. Calculator\n 4. Perfect Square\n 5. Square Root\n 6. BMI Calculator\n 7. Games\n 8. PI Converter\n 9. QR Code Creator\n 10. Input Length Identifier \n\nEnter option number: ")
 
 print(Fore.BLUE)
 
@@ -365,6 +365,16 @@ elif options == '9':
   url.svg("myqr.svg", scale = 8)
   
   url.png('myqr.png', scale = 6)
+  
+  print("Please check myqr.png to see your barcode!")
+
+elif options == '10':
+  para = input ("Enter paragraph: ")
+  sleep(2.50)
+  print("\n")
+  print("\n")
+  para_len = (len(para))
+  print("Characters: ",para_len)
 
 else:
   print("That is not an option!")
